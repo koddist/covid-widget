@@ -1,6 +1,6 @@
-# HypoNg
+# COVID19 Statistics widget
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+This widget made with Angular Elements
 
 ## Development server
 
