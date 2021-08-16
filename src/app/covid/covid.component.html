@@ -1,0 +1,40 @@
+<div class="container">
+  <p class="title">🦠 COVID19</p>
+  <div class="data-container">
+    <p class="data-title">🌎 Global</p>
+    <div class="data-grid">
+      <div class="data">
+        <p class="subtitle">{{ summary?.Global?.NewConfirmed | number:'':'de-DE' }}</p>
+        <p class="subtext">new cases</p>
+      </div>
+      <div class="data">
+        <p class="subtitle">{{ summary?.Global?.TotalConfirmed | number:'':'de-DE' }}</p>
+        <p class="subtext">confirmed cases</p>
+      </div>
+      <div class="data">
+        <p class="subtitle">{{ summary?.Global?.TotalDeaths | number:'':'de-DE' }}</p>
+        <p class="subtext">deaths</p>
+      </div>
+    </div>
+  </div>
+  <div class="data-container" *ngIf="this.countryCode && getCountrySummary(this.countryCode)">
+    <div class="data-title-flag">
+      <img src="https://www.countryflags.io/{{ this.countryCode | lowercase }}/flat/32.png" alt="Flag">
+      <p class="data-title">{{ getCountrySummary(this.countryCode)?.Country }}</p>
+    </div>
+    <div class="data-grid" *ngIf="getCountrySummary(this.countryCode)">
+      <div class="data">
+        <p class="subtitle">{{ getCountrySummary(this.countryCode)?.NewConfirmed | number:'':'de-DE' }}</p>
+        <p class="subtext">new cases</p>
+      </div>
+      <div class="data">
+        <p class="subtitle">{{ getCountrySummary(this.countryCode)?.TotalConfirmed | number:'':'de-DE' }}</p>
+        <p class="subtext">confirmed cases</p>
+      </div>
+      <div class="data">
+        <p class="subtitle">{{ getCountrySummary(this.countryCode)?.TotalDeaths | number:'':'de-DE' }}</p>
+        <p class="subtext">deaths</p>
+      </div>
+    </div>
+  </div>
+</div>
