@@ -1,5 +1,5 @@
 {
-  "name": "hypo-ng",
+  "name": "covid-widget",
   "version": "0.0.0",
   "scripts": {
     "gcp-build": "npm run build",
