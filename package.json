@@ -2,9 +2,10 @@
   "name": "hypo-ng",
   "version": "0.0.0",
   "scripts": {
+    "gcp-build": "npm run build",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --output-hashing none",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
